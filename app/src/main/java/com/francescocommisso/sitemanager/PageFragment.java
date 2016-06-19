@@ -13,6 +13,7 @@ import android.view.ViewGroup;
  */
 public class PageFragment extends Fragment {
 
+    //Something
 
     public PageFragment() {
         // Required empty public constructor
