@@ -11,6 +11,7 @@ import java.util.Collections;
 
 public class DBHandler extends SQLiteOpenHelper {
 
+    //ass
     private static DBHandler instance = null;
     private static final int DATABASE_VERSION = 1;
     private static final String DATABASE_NAME = "sites.db";
