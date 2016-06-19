@@ -11,7 +11,6 @@ import java.util.Collections;
 
 public class DBHandler extends SQLiteOpenHelper {
 
-    //ass
     private static DBHandler instance = null;
     private static final int DATABASE_VERSION = 1;
     private static final String DATABASE_NAME = "sites.db";
@@ -24,7 +23,6 @@ public class DBHandler extends SQLiteOpenHelper {
     public static final String COLUMN_NUMBER_OF_LOTS = "numberOfLots";
     public static final String COLUMN_LOT_ID = "_id";
     public static final String COLUMN_STATUS = "status";
-
 
     private DBHandler(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -131,8 +129,8 @@ public class DBHandler extends SQLiteOpenHelper {
     public void setSites(SQLiteDatabase db){
         String query = "SELECT * FROM " + TABLE_SITES + " WHERE 1";
         sites.clear();
-
         Cursor c = db.rawQuery(query,null);
+
         if (c.moveToFirst()) {
             do {
                 String name = c.getString(c.getColumnIndex(COLUMN_SITE_NAME));
@@ -170,7 +168,6 @@ public class DBHandler extends SQLiteOpenHelper {
     }
 
     public boolean checkExists(String name){
-
         setSites(this.getWritableDatabase());
 
         for(Site s:sites){
