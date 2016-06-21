@@ -1,6 +1,7 @@
 package com.francescocommisso.sitemanager;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -63,13 +64,20 @@ public class LotGridAdapter extends BaseAdapter{
 
         holder.setID(position+1);
 
+        Drawable complete = cell.getResources().getDrawable(R.drawable.rounded_corner_complete);
+
+        Drawable incomplete = cell.getResources().getDrawable(R.drawable.rounded_corner_incomplete);
+
+        Drawable issue = cell.getResources().getDrawable(R.drawable.rounded_corner_issue);
+
 
         switch (list.get(position).getStatus()) {
-            case Lot.INCOMPLETE: cell.findViewById(R.id.lot_cell).setBackgroundColor(ContextCompat.getColor(context, R.color.red));
+
+            case Lot.INCOMPLETE: cell.setBackground(incomplete);
                 break;
-            case Lot.COMPLETE: cell.findViewById(R.id.lot_cell).setBackgroundColor(ContextCompat.getColor(context, R.color.light_blue));
+            case Lot.COMPLETE: cell.setBackground(complete);
                 break;
-            default: cell.findViewById(R.id.lot_cell).setBackgroundColor(ContextCompat.getColor(context, R.color.yellow));
+            default: cell.setBackground(issue);
 
         }
         return cell;

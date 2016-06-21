@@ -14,8 +14,8 @@ class SiteAdapter extends ArrayAdapter<Site> {
     private int layout;
 
     public SiteAdapter(Context context, ArrayList<Site> sites) {
-        super(context, R.layout.array_row, sites);
-        this.layout = R.layout.array_row;
+        super(context, R.layout.main_activity_listview_row, sites);
+        this.layout = R.layout.main_activity_listview_row;
         dbh = DBHandler.getInstance(context);
     }
 

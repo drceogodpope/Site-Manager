@@ -20,7 +20,7 @@
         android:layout_centerHorizontal="true"
         android:background="@color/off_white"
         android:backgroundTint="@color/off_white"
-        android:divider="@color/red"
-        android:dividerHeight="1dp" />
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10dp" />
 
 </RelativeLayout>

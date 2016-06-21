@@ -1,7 +1,5 @@
 package com.francescocommisso.sitemanager;
 
-import android.media.Image;
-
 import java.util.ArrayList;
 
 public class Site {
@@ -12,7 +10,7 @@ public class Site {
     private ArrayList<Lot> lots;
 
     public Site(String name,int totalLots){
-        this.name = name;
+        this.name = getCapitilizedName(name);
         this.totalLots  = totalLots;
         lots = new ArrayList<>();
         for(int i = 0; i<totalLots; i++){
@@ -27,13 +25,30 @@ public class Site {
         }
     }
 
-
     public String getName(){
         return name;
     }
 
     public String getFormattedName(){
         return formattedName;
+    }
+
+    public String getCapitilizedName(String name){
+        StringBuilder titleCase = new StringBuilder();
+        boolean nextTitleCase = true;
+
+        for (char c : name.toCharArray()) {
+            if (Character.isSpaceChar(c)) {
+                nextTitleCase = true;
+            } else if (nextTitleCase) {
+                c = Character.toTitleCase(c);
+                nextTitleCase = false;
+            }
+
+            titleCase.append(c);
+        }
+
+        return titleCase.toString();
     }
 
     public int getTotalLots(){

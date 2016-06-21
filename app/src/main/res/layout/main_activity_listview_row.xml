@@ -16,9 +16,10 @@
         android:id="@+id/site_name"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="false"
-        android:textColor="@color/off_black"
+        android:textColor="@color/off_white"
         android:layout_alignParentLeft="true"
-        android:paddingTop="15dp" />
+        android:paddingTop="15dp"
+        android:background="@drawable/rounded_corner" />
 
     <!--<ImageButton-->
         <!--android:layout_width="wrap_content"-->

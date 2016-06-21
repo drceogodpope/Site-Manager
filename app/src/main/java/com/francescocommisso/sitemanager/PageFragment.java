@@ -13,11 +13,9 @@ import android.view.ViewGroup;
  */
 public class PageFragment extends Fragment {
 
-
     public PageFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

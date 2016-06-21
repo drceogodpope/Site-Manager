@@ -71,7 +71,7 @@ public class LotActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_main, menu);
+        inflater.inflate(R.menu.menu_lot_activity, menu);
         setTitle(siteName + " - " + String.valueOf(lotId));
         return super.onCreateOptionsMenu(menu);
     }
