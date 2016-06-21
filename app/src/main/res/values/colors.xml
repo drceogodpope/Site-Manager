@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="red"> #A20900</color>
+    <color name="dark_red"> #621708</color>
     <color name="dark_blue"> #336699</color>
     <color name="light_blue"> #00BFFF</color>
     <color name="yellow"> #F5BB00</color>
-    <color name="grey"> #B49DAA</color>
+    <color name="light_grey"> #B49DAA</color>
+    <color name="grey"> #6D676E</color>
     <color name="off_white"> #EFEEF7</color>
     <color name="off_black"> #0D0809</color>
+    <color name="lime_green"> #339628 </color>
+    <color name="steel"> #335C67</color>
     <color name="white"> #FFFFFF</color>
+    <color name="purple"> #561643</color>
     <color name="light_greyblue"> #D9F7FA</color>
+
+
 </resources>
+
+

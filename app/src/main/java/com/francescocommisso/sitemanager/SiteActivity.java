@@ -39,7 +39,6 @@ public class SiteActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(SiteActivity.this,LotActivity.class);
-                System.out.println(position);
                 intent.putExtra("LotPosition",position);
                 intent.putExtra("LotId",position + 1);
                 intent.putExtra("SitePosition",getIntent().getExtras().getInt("Position"));
