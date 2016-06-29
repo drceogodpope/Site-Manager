@@ -1,82 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:weightSum="1"
     android:background="@color/off_white"
-    android:contextClickable="false">
+    android:contextClickable="true"
+    android:gravity="center|fill|fill_vertical">
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Site Name"
-        android:id="@+id/site_name_prompt"
-        android:textColor="@color/off_black"
-        android:layout_margin="20dp"
-        android:layout_gravity="center_horizontal" />
-
-    <EditText
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/input_site_name"
-        android:gravity="center_horizontal"
-        android:backgroundTint="@color/red"
-        android:inputType="text"
-        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
-        android:textColor="@color/off_black"
-        android:shadowColor="@color/off_black"
-        android:singleLine="true" />
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Number of Lots"
-        android:textColor="@color/off_black"
-        android:id="@+id/number_of_lots_prompt"
-        android:layout_margin="20dp"
-        android:layout_gravity="center_horizontal" />
+        <ImageButton
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:id="@+id/imageButton"
+            android:layout_gravity="top"
+            android:src="@drawable/ic_photo"/>
 
-    <EditText
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="10dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords|textNoSuggestions"
+                android:id="@+id/input_site_name"
+                android:background="@android:color/transparent"
+                android:textDirection="firstStrongLtr"
+                android:gravity="right"
+                android:ellipsize="none"
+                android:scrollHorizontally="false"
+                android:backgroundTint="@color/red"
+                android:textSize="35dp"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                android:textColor="@color/off_black"
+                android:singleLine="false"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal|right"
+                android:paddingTop="30dp"
+                android:hint="Site Name"
+                android:layout_toRightOf="@+id/imageButton"
+                android:layout_marginLeft="15dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:inputType="number"
+                android:textColor="@color/off_black"
+                android:backgroundTint="@color/red"
+                android:id="@+id/input_number_of_lots"
+                android:layout_gravity="center_horizontal|right"
+                android:gravity="center_horizontal"
+                android:layout_below="@+id/input_site_name"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="10dp"
+                android:hint="Number of Lots"
+                android:textSize="20dp"
+                android:textAlignment="textEnd" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:textColor="@color/off_black"
-        android:backgroundTint="@color/red"
-        android:ems="10"
-        android:id="@+id/input_number_of_lots"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center_horizontal" />
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:gravity="center|bottom"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Site Image"
-        android:textColor="@color/off_black"
-        android:id="@+id/site_image_prompt"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="20dp" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Site"
+            android:padding="20dp"
+            android:textSize="15dp"
+            android:layout_gravity="center_horizontal|center"
+            android:id="@+id/button_create_site"
+            android:background="@drawable/rounded_corner_issue"
+            android:textColor="@color/white"
+            android:gravity="center|bottom" />
 
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageButton"
-        android:textColor="@color/off_white"
-        android:layout_gravity="center_horizontal"
-        android:background="@color/purple"
-        android:src="@drawable/ic_photo" />
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Create Site"
-        android:id="@+id/button_create_site"
-        android:background="@color/purple"
-        android:textColor="@color/white"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="20dp" />
+    </LinearLayout>
 
 </LinearLayout>

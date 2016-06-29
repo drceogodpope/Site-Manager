@@ -5,8 +5,10 @@
     <color name="dark_blue"> #336699</color>
     <color name="light_blue"> #00BFFF</color>
     <color name="yellow"> #F5BB00</color>
-    <color name="light_grey"> #B49DAA</color>
-    <color name="grey"> #6D676E</color>
+    <color name="light_grey"> #D6D7D7</color>
+    <color name="grey"> #A8A7AE</color>
+    <color name="teal"> #78A9A8</color>
+    <color name="dark_grey"> #6E6D71</color>
     <color name="off_white"> #EFEEF7</color>
     <color name="off_black"> #0D0809</color>
     <color name="lime_green"> #339628 </color>

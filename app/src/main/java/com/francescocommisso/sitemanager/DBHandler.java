@@ -85,7 +85,6 @@ public class DBHandler extends SQLiteOpenHelper {
         updatedValues.put(COLUMN_STATUS,status);
         db.update(formattedName,updatedValues,COLUMN_ID + " = " + lotNumberString,null);
         db.close();
-        System.out.println(dbToString(formattedName));
         return true;
     }
 

@@ -11,6 +11,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.francescocommisso.sitemanager.Activities.NewSiteActivity;
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity{
@@ -31,6 +33,7 @@ public class MainActivity extends AppCompatActivity{
         ListView siteListView = (ListView) findViewById(R.id.siteList);
         assert siteListView != null;
         siteListView.setAdapter(sAdapt);
+        System.out.println(dbh.dbToString(null));
         siteListView.setOnItemClickListener(new ListView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -46,7 +49,7 @@ public class MainActivity extends AppCompatActivity{
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_main, menu);
-        menu.addSubMenu("UPDATE DATABASE");
+//        menu.addSubMenu("UPDATE DATABASE");
         MenuItem addButton = menu.findItem(R.id.action_addSite);
 
         assert addButton != null;

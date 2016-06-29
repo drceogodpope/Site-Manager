@@ -1,13 +1,20 @@
 package com.francescocommisso.sitemanager;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
-import android.support.v4.content.ContextCompat;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.TextView;
+
 import java.util.ArrayList;
 
 public class LotGridAdapter extends BaseAdapter{
@@ -46,7 +53,6 @@ public class LotGridAdapter extends BaseAdapter{
         }
     }
 
-// sd
     @Override
     public View getView(int position, final View convertView, ViewGroup parent) {
         View cell = convertView;

@@ -9,7 +9,9 @@ import android.view.MenuInflater;
 import android.view.View;
 import android.widget.Button;
 
-
+/**
+ * Created by francescocommisso on 16-06-24.
+ */
 public class LotActivity extends AppCompatActivity {
 
     Site site;
@@ -22,6 +24,7 @@ public class LotActivity extends AppCompatActivity {
     Button incompleteButton;
     Button issueButton;
     Intent intent;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,13 +37,13 @@ public class LotActivity extends AppCompatActivity {
         lotPosition = getIntent().getExtras().getInt("LotPosition");
         lotId = getIntent().getExtras().getInt("LotId");
         lot = site.getLot(lotPosition);
-        intent = new Intent(LotActivity.this,SiteActivity.class);
+        intent = new Intent(LotActivity.this, SiteActivity.class);
         intent.putExtra("Position", getIntent().getExtras().getInt("SitePosition"));
 
         completeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dbh.updateLotStatus(site.getFormattedName(), lotId,Lot.COMPLETE);
+                dbh.updateLotStatus(site.getFormattedName(), lotId, Lot.COMPLETE);
                 site.getLot(lotPosition).setStatus(Lot.COMPLETE);
                 startActivity(intent);
                 overridePendingTransition(R.anim.pull_in_left, R.anim.push_out_right);
@@ -49,7 +52,7 @@ public class LotActivity extends AppCompatActivity {
         incompleteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dbh.updateLotStatus(site.getFormattedName(), lotId,Lot.INCOMPLETE);
+                dbh.updateLotStatus(site.getFormattedName(), lotId, Lot.INCOMPLETE);
                 site.getLot(lotPosition).setStatus(Lot.INCOMPLETE);
                 startActivity(intent);
                 overridePendingTransition(R.anim.pull_in_left, R.anim.push_out_right);
@@ -59,7 +62,7 @@ public class LotActivity extends AppCompatActivity {
         issueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dbh.updateLotStatus(site.getFormattedName(), lotId,Lot.ERROR);
+                dbh.updateLotStatus(site.getFormattedName(), lotId, Lot.ERROR);
                 site.getLot(lotPosition).setStatus(Lot.ERROR);
                 startActivity(intent);
                 overridePendingTransition(R.anim.pull_in_left, R.anim.push_out_right);
