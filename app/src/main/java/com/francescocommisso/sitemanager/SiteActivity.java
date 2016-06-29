@@ -3,7 +3,6 @@ package com.francescocommisso.sitemanager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -12,6 +11,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
+
 import java.util.ArrayList;
 
 public class SiteActivity extends AppCompatActivity {
@@ -53,7 +53,6 @@ public class SiteActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         menu.addSubMenu("Delete Site");
         setTitle(site.getName());
-        System.out.println("Options?");
         return true;
     }
 

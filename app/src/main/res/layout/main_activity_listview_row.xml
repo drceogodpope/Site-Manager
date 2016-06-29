@@ -5,53 +5,29 @@
     android:descendantFocusability="blocksDescendants"
     android:id="@+id/row">
 
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
 
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="60dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="sdgfsg"
+        android:text="Site Name Goes Here"
         android:textAlignment="center"
         android:id="@+id/site_name"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="false"
-        android:textColor="@color/off_white"
+        android:textSize="25sp"
+        android:textColor="@color/dark_grey"
         android:layout_alignParentLeft="true"
-        android:paddingTop="15dp"
-        android:background="@drawable/rounded_corner" />
+        android:paddingTop="15dp" />
 
-    <!--<ImageButton-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:id="@+id/site_status"-->
-        <!--android:src="@drawable/ic_check_circle"-->
-        <!--android:background="@android:color/transparent"-->
-        <!--android:layout_toStartOf="@+id/site_notification"-->
-        <!--android:layout_alignBottom="@+id/site_notification"-->
-        <!--android:layout_toLeftOf="@+id/site_notification"-->
-        <!--android:paddingBottom="10dp" />-->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
 
-    <!--<ImageButton-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:src="@drawable/ic_action_bell"-->
-        <!--android:id="@+id/site_notification"-->
-        <!--android:background="@android:color/transparent"-->
-        <!--android:layout_alignParentTop="true"-->
-        <!--android:layout_toStartOf="@+id/site_delete"-->
-        <!--android:layout_alignBottom="@+id/site_delete"-->
-        <!--android:paddingTop="10dp"-->
-        <!--android:paddingRight="10dp" />-->
+</LinearLayout>
 
-    <!--<ImageButton-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:src="@drawable/ic_action_cancel"-->
-        <!--android:id="@+id/site_delete"-->
-        <!--android:background="@android:color/transparent"-->
-        <!--android:layout_alignParentEnd="true"-->
-        <!--android:layout_alignParentRight="true"-->
-        <!--android:layout_alignParentTop="false"-->
-        <!--android:paddingTop="15dp" />-->
 </RelativeLayout>

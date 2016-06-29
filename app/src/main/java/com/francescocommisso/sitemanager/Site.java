@@ -20,7 +20,7 @@ public class Site {
 
         for(int i = 0; i<this.name.length();i++){
             if (this.name.charAt(i)!=' '){
-                formattedName += name.charAt(i);
+                formattedName += this.name.charAt(i);
             }
         }
     }
